@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC001-login-with-valid-credintials</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8656f788-7e0a-4574-b256-45516560ec0b</testCaseGuid>
+</TestCaseEntity>

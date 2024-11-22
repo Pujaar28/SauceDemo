@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC002-login-with-invalid-credintials</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>49cd754b-7cfd-4c98-bbe4-d345c0618f12</testCaseGuid>
+</TestCaseEntity>
