@@ -23,43 +23,14 @@ WebUI.navigateToUrl(GlobalVariable.baseURL)
 
 WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
 
-WebUI.setText(findTestObject('Page_Login/field_Password'), 'hehe')
-
-WebUI.click(findTestObject('Page_Login/button_Login'))
-
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
-
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noRecords)
-
-WebUI.setText(findTestObject('Page_Login/field_Username'), 'hehe')
-
 WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
 
 WebUI.click(findTestObject('Page_Login/button_Login'))
 
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
+WebUI.click(findTestObject('Page_Dashboard/Add_Item_To_Cart'))
 
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noRecords)
+WebUI.click(findTestObject('Page_Dashboard/button_Cart'))
 
-WebUI.refresh()
-
-WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
-
-WebUI.click(findTestObject('Page_Login/button_Login'))
-
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
-
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noUsername)
-
-WebUI.refresh()
-
-WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
-
-WebUI.click(findTestObject('Page_Login/button_Login'))
-
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
-
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noPassword)
+WebUI.click(findTestObject('Page_Cart/button_remove_item'))
 
 WebUI.closeBrowser()
-

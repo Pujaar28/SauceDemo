@@ -3,6 +3,7 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import javax.xml.bind.annotation.XmlElementDecl.GLOBAL as GLOBAL
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -23,43 +24,47 @@ WebUI.navigateToUrl(GlobalVariable.baseURL)
 
 WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
 
-WebUI.setText(findTestObject('Page_Login/field_Password'), 'hehe')
-
-WebUI.click(findTestObject('Page_Login/button_Login'))
-
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
-
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noRecords)
-
-WebUI.setText(findTestObject('Page_Login/field_Username'), 'hehe')
-
 WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
 
 WebUI.click(findTestObject('Page_Login/button_Login'))
 
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
+WebUI.click(findTestObject('Page_Dashboard/Add_Item_To_Cart'))
 
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noRecords)
+WebUI.click(findTestObject('Page_Dashboard/button_Cart'))
 
-WebUI.refresh()
+WebUI.click(findTestObject('Page_Cart/button_Checkout'))
 
-WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
+WebUI.setText(findTestObject('Page_Checkout/Field_FirstName'), 'Puja Aditya')
 
-WebUI.click(findTestObject('Page_Login/button_Login'))
+WebUI.setText(findTestObject('Page_Checkout/Field_LastName'), 'Raihan')
 
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
+WebUI.setText(findTestObject('Page_Checkout/Field_PostalCode'), '42123')
 
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noUsername)
+WebUI.click(findTestObject('Page_Checkout/button_Continue'))
 
-WebUI.refresh()
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/product_Item'), 0)
 
-WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/product_name'), 0)
 
-WebUI.click(findTestObject('Page_Login/button_Login'))
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/product_desc'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Page_Login/error_Message'), 0)
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/Payment_Info'), 0)
 
-WebUI.verifyElementText(findTestObject('Page_Login/error_Message'), GlobalVariable.noPassword)
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/summary_tax_label'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/summary_total_label'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/summary_subtotal_label'), 0)
+
+WebUI.scrollToPosition(0, 500)
+
+WebUI.click(findTestObject('Page_Checkout/button_finish'))
+
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/complete_checkout'), 0)
+
+WebUI.verifyTextPresent('THANK YOU FOR YOUR ORDER', false)
+
+WebUI.verifyElementPresent(findTestObject('Page_Checkout/Image'), 0)
 
 WebUI.closeBrowser()
 

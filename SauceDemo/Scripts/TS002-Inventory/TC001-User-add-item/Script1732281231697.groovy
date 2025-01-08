@@ -21,8 +21,15 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.baseURL)
 
-WebUI.setText(findTestObject('Login/field_Username'), GlobalVariable.userName)
+WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
 
-WebUI.setText(findTestObject('Login/field_Password'), GlobalVariable.userPass)
+WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
 
-WebUI.click(findTestObject('Login/button_Login'))
+WebUI.click(findTestObject('Page_Login/button_Login'))
+
+WebUI.click(findTestObject('Page_Dashboard/Add_Item_To_Cart'))
+
+WebUI.click(findTestObject('Page_Dashboard/button_Cart'))
+
+WebUI.closeBrowser()
+

@@ -21,11 +21,11 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.baseURL)
 
-WebUI.setText(findTestObject('Login/field_Username'), GlobalVariable.userName)
+WebUI.setText(findTestObject('Page_Login/field_Username'), GlobalVariable.userName)
 
-WebUI.setText(findTestObject('Login/field_Password'), GlobalVariable.userPass)
+WebUI.setText(findTestObject('Page_Login/field_Password'), GlobalVariable.userPass)
 
-WebUI.click(findTestObject('Login/button_Login'))
+WebUI.click(findTestObject('Page_Login/button_Login'))
 
 String currentUrl_One = WebUI.getUrl()
 
@@ -35,9 +35,9 @@ if (currentUrl_One == "https:\\www.saucedemo.com/v1/inventory.html") {
     println("URL is incorrect: " + currentUrl_One)
 }
 
-WebUI.click(findTestObject('Dashboard/side_Menu'))
+WebUI.click(findTestObject('Page_Dashboard/side_Menu'))
 
-WebUI.click(findTestObject('Dashboard/button_Logout'))
+WebUI.click(findTestObject('Page_Dashboard/button_Logout'))
 
 String currentUrl_Two = WebUI.getUrl()
 

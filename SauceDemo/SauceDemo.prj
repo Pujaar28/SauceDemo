@@ -9,9 +9,9 @@
    <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>FREE</modifiedEdition>
-   <modifiedVersion>9.5.0</modifiedVersion>
+   <modifiedVersion>9.7.3</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>D:\Project Katalon\SauceDemo\SauceDemo\SauceDemo.prj</projectFileLocation>
+   <projectFileLocation>D:\Project\Saucedemo\SauceDemo\SauceDemo.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
