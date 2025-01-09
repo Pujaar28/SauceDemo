@@ -33,4 +33,7 @@ WebUI.click(findTestObject('Page_Dashboard/button_Cart'))
 
 WebUI.click(findTestObject('Page_Cart/button_remove_item'))
 
+WebUI.verifyElementNotPresent(findTestObject('Page_Cart/Product_Item'), 0)
+
 WebUI.closeBrowser()
+

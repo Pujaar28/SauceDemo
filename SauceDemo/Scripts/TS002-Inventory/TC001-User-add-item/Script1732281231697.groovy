@@ -31,5 +31,7 @@ WebUI.click(findTestObject('Page_Dashboard/Add_Item_To_Cart'))
 
 WebUI.click(findTestObject('Page_Dashboard/button_Cart'))
 
+WebUI.verifyElementPresent(findTestObject('Page_Cart/Product_Item'), 0)
+
 WebUI.closeBrowser()
 
